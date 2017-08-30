@@ -1,0 +1,15 @@
+# Learn more about services, parameters and containers at
+# https://symfony.com/doc/current/service_container.html
+parameters:
+    #parameter_name: value
+
+services:
+    app.processor.crap:
+        class: AppBundle\Processor\CrapProcessor
+        arguments:
+            - "@event_dispatcher"
+
+    app.event.listener.shitty:
+        class: AppBundle\Event\Listener\ShittyEventListener
+        tags:
+            - {name: kernel.event_listener, event: app.shitty, method: onShitty}
