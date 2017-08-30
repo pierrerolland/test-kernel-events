@@ -9,7 +9,7 @@ services:
         arguments:
             - "@event_dispatcher"
 
-    app.event.listener.shitty:
-        class: AppBundle\Event\Listener\ShittyEventListener
+    app.event.subscriber.shitty:
+        class: AppBundle\Event\Subscriber\ShittyEventSubscriber
         tags:
-            - {name: kernel.event_listener, event: app.shitty, method: onShitty}
+            - {name: kernel.event_subscriber}

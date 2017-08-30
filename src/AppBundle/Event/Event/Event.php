@@ -2,9 +2,9 @@
 
 namespace AppBundle\Event\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Component\EventDispatcher\Event as BaseEvent;
 
-class ShittyEvent extends Event
+class Event extends BaseEvent
 {
     /**
      * @var array
